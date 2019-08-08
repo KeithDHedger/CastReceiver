@@ -1,0 +1,21 @@
+#
+#
+AC_INIT([CastReceiver],[0.0],[PROJ],[CastReceiver])
+
+AC_CONFIG_HEADER([config.h])
+AC_PROG_CXX
+
+AM_INIT_AUTOMAKE
+
+AC_PROG_CC
+AC_HEADER_STDC
+
+AC_SUBST(CFLAGS)
+AC_SUBST(CPPFLAGS)
+AC_SUBST(LDFLAGS)
+
+CFLAGS=-Wall
+AC_SUBST(CFLAGS)
+
+AC_OUTPUT(Makefile CastReceiver/app/Makefile)
+
