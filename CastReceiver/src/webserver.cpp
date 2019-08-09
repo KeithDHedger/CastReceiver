@@ -30,7 +30,7 @@ int webserver_register_buf(const char *path,const char *contents,const char *con
 {
 	struct virtual_file *entry;
 
-	entry=malloc(sizeof(struct virtual_file));
+	entry=(virtual_file *)malloc(sizeof(struct virtual_file));
 	if (entry==NULL)
 		return(-1);
 
@@ -51,13 +51,14 @@ int webserver_register_file(const char *path,const char *content_type)
 	struct virtual_file *entry;
 	int rc;
 
-	snprintf(local_fname,sizeof(local_fname),"%s%s",PKG_DATADIR,strrchr(path,'/'));
+//	snprintf(local_fname,sizeof(local_fname),"%s%s",PKG_DATADIR,strrchr(path,'/'));//TODO//
+	snprintf(local_fname,sizeof(local_fname),"%s%s",DATADIR,strrchr(path,'/'));
 
 	rc=stat(local_fname,&buf);
 	if (rc)
 		return(-1);
 
-	entry=malloc(sizeof(struct virtual_file));
+	entry=(virtual_file *)malloc(sizeof(struct virtual_file));
 	if (entry==NULL)
 		return(-1);
 
@@ -71,7 +72,7 @@ int webserver_register_file(const char *path,const char *content_type)
 					free(entry);
 					return(-1);
 				}
-			cbuf=malloc(buf.st_size);
+			cbuf=(char *)malloc(buf.st_size);
 			if (cbuf==NULL)
 				{
 					free(entry);
@@ -131,7 +132,7 @@ UpnpWebFileHandle webserver_open(const char *filename,enum UpnpOpenFileMode mode
 		{
 			if (strcmp(filename,vf->virtual_fname)==0)
 				{
-					struct WebServerFile *file=malloc(sizeof(struct WebServerFile));
+					struct WebServerFile *file=( WebServerFile *)malloc(sizeof(struct WebServerFile));
 					file->pos=0;
 					file->len=vf->len;
 					file->contents=vf->contents;

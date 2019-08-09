@@ -94,7 +94,6 @@ gboolean process_cmdline(int argc,char **argv)
 int main(int argc,char **argv)
 {
 	struct upnp_device_descriptor	*upnp_renderer;
-
 	if(!process_cmdline(argc,argv))
 		return(EXIT_FAILURE);
 
