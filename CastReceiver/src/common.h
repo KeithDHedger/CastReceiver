@@ -14,9 +14,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include <unistd.h>
-//#include <errno.h>
-//#include <stdarg.h>
 //#include <assert.h>
 #include <string.h>
 #include <sys/stat.h>
@@ -46,7 +43,6 @@
 #include "upnp_connmgr.h"
 #include "upnp_control.h"
 #include "upnp_renderer.h"
-#include "git-version.h"
 
 extern bool	exitOnStop;
 
