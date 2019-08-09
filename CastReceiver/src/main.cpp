@@ -36,7 +36,7 @@ const gchar			*uuid=GMRENDER_UUID;
 /* Generic CastReceiver options */
 GOptionEntry		optionEntries[]=
 {
-	{"version",0,0,G_OPTION_ARG_NONE,&showVersion,"Output version information and exit",NULL},
+	{"version",'V',0,G_OPTION_ARG_NONE,&showVersion,"Output version information and exit",NULL},
 	{"friendly-name",'f',0,G_OPTION_ARG_STRING,&friendlyName,"Friendly name to advertise.",NULL},
 	{"exit-on-stop",'e',0,G_OPTION_ARG_NONE,&exitOnStop,"Exit when file stopped.",NULL},
 	{"verbose",'v',0,G_OPTION_ARG_NONE,&startUpTalk,"Show renderer details on start.",NULL},
