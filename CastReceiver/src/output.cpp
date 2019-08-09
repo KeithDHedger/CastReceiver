@@ -1,47 +1,23 @@
 /*
  *
- * ©K. D. Hedger. Sun  4 Aug 16:06:08 BST 2019 keithdhedger@gmail.com
+ * ©K. D. Hedger. Fri  9 Aug 15:00:44 BST 2019 keithdhedger@gmail.com
 
- * This file (output.c) is part of gmrender-resurrect.
+ * This file (output.cpp) is part of CastReceiver.
 
- * gmrender-resurrect is free software: you can redistribute it and/or modify
+ * CastReceiver is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation,either version 3 of the License,or
+ * the Free Software Foundation, either version 3 of the License, or
  * at your option) any later version.
 
- * gmrender-resurrect is distributed in the hope that it will be useful,
+ * CastReceiver is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with gmrender-resurrect.  If not,see <http://www.gnu.org/licenses/>.
+ * along with CastReceiver.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* output.c - Output module frontend
- *
- * Copyright(C) 2007 Ivo Clarysse,(C) 2012 Henner Zeller
- *
- * This file is part of GMediaRender.
- *
- * GMediaRender is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License,or
- *(at your option) any later version.
- *
- * GMediaRender is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Library General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with GMediaRender; if not,write to the Free Software
- * Foundation,Inc.,51 Franklin Street,Fifth Floor,Boston,
- * MA 02110-1301,USA.
- *
- */
-
-//#include "output.h"
 #include "common.h"
 
 char		*omxplayerURI=NULL;

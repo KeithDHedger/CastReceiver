@@ -1,32 +1,27 @@
-/* upnp_connmgr.c - UPnP Connection Manager routines
+/*
  *
- * Copyright (C) 2005-2007   Ivo Clarysse
- *
- * This file is part of GMediaRender.
- *
- * GMediaRender is free software; you can redistribute it and/or modify
+ * ©K. D. Hedger. Fri  9 Aug 15:01:27 BST 2019 keithdhedger@gmail.com
+
+ * This file (upnp_connmgr.cpp) is part of CastReceiver.
+
+ * CastReceiver is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License,or
- * (at your option) any later version.
- *
- * GMediaRender is distributed in the hope that it will be useful,
+ * the Free Software Foundation, either version 3 of the License, or
+ * at your option) any later version.
+
+ * CastReceiver is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Library General Public License for more details.
- *
+   GNU General Public License for more details.
+
  * You should have received a copy of the GNU General Public License
- * along with GMediaRender; if not,write to the Free Software
- * Foundation,Inc.,51 Franklin Street,Fifth Floor,Boston,
- * MA 02110-1301,USA.
- *
+ * along with CastReceiver.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-//#include "upnp_connmgr.h"
 #include "common.h"
 
 ithread_mutex_t connmgr_mutex;
 
-//struct argument **argument_listX[]={NULL,NULL,NULL,NULL,NULL};
 struct argument **argument_listX[]={[CONNMGR_CMD_GETCURRENTCONNECTIONIDS]=NULL,[CONNMGR_CMD_GETPROTOCOLINFO]=NULL,[CONNMGR_CMD_PREPAREFORCONNECTION]=NULL,[CONNMGR_CMD_UNKNOWN]=NULL};
 
 const char *connmgr_default_values[]={[CONNMGR_VAR_AAT_CONN_MGR]=NULL,[CONNMGR_VAR_SINK_PROTO_INFO]=NULL,[CONNMGR_VAR_AAT_CONN_STATUS]=NULL,[CONNMGR_VAR_AAT_AVT_ID]=NULL,[CONNMGR_VAR_AAT_DIR]=NULL,[CONNMGR_VAR_AAT_RCS_ID]=NULL,[CONNMGR_VAR_AAT_PROTO_INFO]=NULL,[CONNMGR_VAR_AAT_CONN_ID]=NULL,[CONNMGR_VAR_SRC_PROTO_INFO]=NULL,[CONNMGR_VAR_CUR_CONN_IDS]=NULL,[CONNMGR_VAR_UNKNOWN]=NULL};
