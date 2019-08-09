@@ -1,10 +1,17 @@
 
-INCLUDES =	-I$(top_srcdir) \
+AM_CPPFLAGS =	-I$(top_srcdir) \
 			-DPREFIX=\""${prefix}\"" \
 			-DDATADIR=\""${pkgdatadir}"\" \
 			-DSYSCONFDIR=\""${sysconfdir}/${PACKAGE}"\" \
-			-DLIBDIR=\""${libdir}/${PACKAGE}"\"
+			-DLIBDIR=\""${libdir}/${PACKAGE}"\" \
+			-DGMRENDER_UUID=\"`uuidgen`\" \
+			$(UPNP_CFLAGS) \
+			$(GLIB_CFLAGS) \
+			$(GTHREAD_CFLAGS)
 
-LIBS =	
+LIBS =		$(UPNP_LIBS) \
+			$(GLIB_LIBS) \
+			$(GTHREAD_LIBS)
+
 
 

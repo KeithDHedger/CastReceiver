@@ -1,1 +1,1 @@
-COMMONSRC = ../src/main.cpp
+COMMONSRC = ../src/common.cpp ../src/main.cpp ../src/output.cpp ../src/upnp_connmgr.cpp ../src/upnp_control.cpp ../src/upnp.cpp ../src/upnp_device.cpp ../src/upnp_renderer.cpp ../src/upnp_transport.cpp ../src/variable-container.cpp ../src/webserver.cpp ../src/xmldoc.cpp ../src/xmlescape.cpp

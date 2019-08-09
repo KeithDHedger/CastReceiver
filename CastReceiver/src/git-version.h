@@ -1,0 +1,1 @@
+#define GM_COMPILE_VERSION "2018-08-18_a7b0b1b"
