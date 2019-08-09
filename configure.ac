@@ -1,6 +1,6 @@
 #
 #
-AC_INIT([CastReceiver],[0.0],[PROJ],[CastReceiver])
+AC_INIT([CastReceiver],[0.0.3],[PROJ],[CastReceiver])
 
 AC_CONFIG_HEADER([config.h])
 AC_PROG_CXX

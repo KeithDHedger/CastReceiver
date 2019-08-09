@@ -57,7 +57,7 @@ const gchar			*friendlyName=PACKAGE_NAME;
 
 const gchar			*uuid=GMRENDER_UUID;
 
-/* Generic GMediaRender options */
+/* Generic CastReceiver options */
 GOptionEntry		optionEntries[]=
 {
 	{"version",0,0,G_OPTION_ARG_NONE,&showVersion,"Output version information and exit",NULL},
@@ -69,7 +69,7 @@ GOptionEntry		optionEntries[]=
 
 void do_showVersion(void)
 {
-	fprintf(stderr,"%s - %s\n",PACKAGE_STRING,GM_COMPILE_VERSION);
+	fprintf(stderr,"%s - %s\n",PACKAGE_NAME,PACKAGE_VERSION);
 }
 
 gboolean process_cmdline(int argc,char **argv)
@@ -78,7 +78,7 @@ gboolean process_cmdline(int argc,char **argv)
 	GError			*err=NULL;
 	int				rc;
 
-	ctx=g_option_context_new("- GMediaRender");
+	ctx=g_option_context_new("- CastReceiver");
 	g_option_context_add_main_entries(ctx,optionEntries,NULL);
 
 	if(!g_option_context_parse(ctx,&argc,&argv,&err))

@@ -17,3 +17,4 @@ stamp-*
 config.h
 autom4te.cache
 IGNORE
+CastReceiver/app/castreceiver
