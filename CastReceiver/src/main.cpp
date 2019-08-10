@@ -80,6 +80,7 @@ int main(int argc,char **argv)
 			exit(EXIT_SUCCESS);
 		}
 
+
 	upnp_renderer=upnp_renderer_descriptor(friendlyName,uuid);
 	if(upnp_renderer==NULL)
 		return(EXIT_FAILURE);
