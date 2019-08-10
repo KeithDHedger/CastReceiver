@@ -43,6 +43,7 @@ void upnp_set_error(struct action_event *event,int error_code,const char *format
 	UpnpString_set_String(errStr,buffer);
 	UpnpActionRequest_set_ErrStr(event->request,errStr);
 	errStrC=UpnpActionRequest_get_ErrStr_cstr(event->request);
+	fprintf(stderr,">>>%s<<<\n",buffer);
 }
 
 const char *upnp_get_string(struct action_event *event,const char *key)

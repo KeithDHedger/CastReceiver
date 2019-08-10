@@ -25,7 +25,6 @@ const char *transport_variable_names[] =
 	[TRANSPORT_VAR_TRANSPORT_STATUS]="TransportStatus",
 	[TRANSPORT_VAR_NEXT_AV_URI]="NextAVTransportURI",
 	[TRANSPORT_VAR_NEXT_AV_URI_META]="NextAVTransportURIMetaData",
-
 	[TRANSPORT_VAR_CUR_TRACK_META]="CurrentTrackMetaData",
 	[TRANSPORT_VAR_REL_CTR_POS]="RelativeCounterPosition",
 	[TRANSPORT_VAR_AAT_INSTANCE_ID]="A_ARG_TYPE_InstanceID",
