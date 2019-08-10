@@ -21,7 +21,7 @@
 #include "common.h"
 
 struct service *upnp_services[3];
-struct upnp_device_descriptor render_device= {upnp_renderer_init,"urn:schemas-upnp-org:device:CastReceiver:1","CastReceiver","K.D.Hedger","https://github.com/KeithDHedger/CastReceiver",PACKAGE_STRING,PACKAGE_NAME,PACKAGE_VERSION,"https://github.com/KeithDHedger/CastReceivert","1","uuid:CastReceiver-1_0-000-000-002","","",NULL,NULL};
+struct upnp_device_descriptor render_device= {upnp_renderer_init,"urn:schemas-upnp-org:device:MediaRenderer:1","CastReceiver","Ivo Clarysse,Henner Zeller","http://github.com/hzeller/gmrender-resurrect",PACKAGE_STRING,PACKAGE_NAME,PACKAGE_VERSION,"http://github.com/hzeller/gmrender-resurrect","1","uuid:CastReceiver-1_0-000-000-002","","",NULL,NULL};
 
 int upnp_renderer_init(void)
 {
