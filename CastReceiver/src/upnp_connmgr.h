@@ -21,6 +21,7 @@
 #ifndef _UPNP_CONNMGR_H
 #define _UPNP_CONNMGR_H
 
+
 #define CONNMGR_TYPE	"urn:schemas-upnp-org:service:ConnectionManager:1"
 #define CONNMGR_SERVICE_ID "urn:upnp-org:serviceId:ConnectionManager"
 #define CONNMGR_SCPD_URL "/upnp/renderconnmgrSCPD.xml"

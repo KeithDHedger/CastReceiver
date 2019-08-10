@@ -18,6 +18,7 @@
  * along with CastReceiver.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #ifndef VARIABLE_CONTAINER_H
 #define VARIABLE_CONTAINER_H
 

@@ -18,6 +18,7 @@
  * along with CastReceiver.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #include "common.h"
 
 const char *transport_variable_names[] =

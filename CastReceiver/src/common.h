@@ -52,6 +52,7 @@
 #include "upnp_control.h"
 #include "upnp_renderer.h"
 
+
 extern const char	*playerCommand;
 extern bool			exitOnStop;
 

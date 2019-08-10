@@ -74,6 +74,7 @@ int main(int argc,char **argv)
 	if(!process_cmdline(argc,argv))
 		return(EXIT_FAILURE);
 
+
 	if(showVersion)
 		{
 			do_showVersion();

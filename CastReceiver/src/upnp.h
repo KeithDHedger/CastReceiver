@@ -21,6 +21,7 @@
 #ifndef _UPNP_H
 #define _UPNP_H
 
+
 #define UpnpAddVirtualDir(x) UpnpAddVirtualDir(x,NULL,NULL)
 
 struct action_event

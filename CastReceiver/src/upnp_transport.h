@@ -21,6 +21,7 @@
 #ifndef _UPNP_TRANSPORT_H
 #define _UPNP_TRANSPORT_H
 
+
 struct service;
 struct upnp_device;
 #define TRANSPORT_TYPE "urn:schemas-upnp-org:service:AVTransport:1"

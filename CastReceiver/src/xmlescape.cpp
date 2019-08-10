@@ -18,6 +18,7 @@
  * along with CastReceiver.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #include "common.h"
 
 void xmlescape_real(const char *str, char *target, int *length,int attribute)

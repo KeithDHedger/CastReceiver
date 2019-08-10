@@ -18,6 +18,7 @@
  * along with CastReceiver.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #include "common.h"
 
 IXML_Document *to_idoc(struct xmldoc *x)

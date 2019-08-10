@@ -18,6 +18,7 @@
  * along with CastReceiver.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #include "common.h"
 
 variable_container_t *VariableContainer_new(int variable_num,const char **variable_names,const char **variable_init_values)
