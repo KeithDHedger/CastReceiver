@@ -39,6 +39,7 @@ GOptionEntry		optionEntries[]=
 	{"version",'V',0,G_OPTION_ARG_NONE,&showVersion,"Output version information and exit",NULL},
 	{"friendly-name",'f',0,G_OPTION_ARG_STRING,&friendlyName,"Friendly name to advertise.",NULL},
 	{"exit-on-stop",'e',0,G_OPTION_ARG_NONE,&exitOnStop,"Exit when file stopped.",NULL},
+	{"player-command",'p',0,G_OPTION_ARG_STRING,&playerCommand,"Custom player command.",NULL},
 	{"verbose",'v',0,G_OPTION_ARG_NONE,&startUpTalk,"Show renderer details on start.",NULL},
 	{NULL}
 };
@@ -97,10 +98,13 @@ int main(int argc,char **argv)
 		}
 
 	output_loop();
+					fprintf(stderr,"DO exit 1 ... \n");
+	upnp_device_shutdown(device);
+//					UpnpFinish();
+					fprintf(stderr,"DO exit 2 ... \n");
 
 	// We're here,because the loop exited. Probably due to catching
 	// a signal.
-	upnp_device_shutdown(device);
 
 	return(EXIT_SUCCESS);
 }

@@ -23,7 +23,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include <assert.h>
 #include <string.h>
 #include <sys/stat.h>
 
@@ -53,7 +52,8 @@
 #include "upnp_control.h"
 #include "upnp_renderer.h"
 
-extern bool	exitOnStop;
+extern const char	*playerCommand;
+extern bool			exitOnStop;
 
 struct xmldoc;
 struct xmlelement *gen_specversion(struct xmldoc *doc,int major,int minor);

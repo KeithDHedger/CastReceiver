@@ -21,23 +21,23 @@
 #include "common.h"
 
 char		*omxplayerURI=NULL;
-GMainLoop	*main_loop_=NULL;
+GMainLoop	*mainLoop=NULL;
 
 void exit_loop_sighandler(int sig)
 {
-	if(main_loop_)
-		g_main_loop_quit(main_loop_);
+	if(mainLoop)
+		g_main_loop_quit(mainLoop);
 }
 
 int output_loop()
 {
 	/* Create a main loop that runs the default GLib main context */
-	main_loop_=g_main_loop_new(NULL,false);
+	mainLoop=g_main_loop_new(NULL,false);
 
 	signal(SIGINT,&exit_loop_sighandler);
 	signal(SIGTERM,&exit_loop_sighandler);
 
-	g_main_loop_run(main_loop_);
+	g_main_loop_run(mainLoop);
 
 	return(0);
 }
@@ -63,12 +63,16 @@ int output_play(void)
 
 	if(omxplayerURI!=NULL)
 		{
-			fprintf(stderr,">>>>>>>>  output_play omxplayer %s<<\n",omxplayerURI);
-//rpi version			asprintf(&command,"omxplayer --key-config ~/.config/omxkey.config %s\n",omxplayerURI);
-			asprintf(&command,"omxplayer '%s'\n",omxplayerURI);
+			asprintf(&command,"%s '%s'\n",playerCommand,omxplayerURI);
 			system(command);
 			if(exitOnStop==true)
-				g_main_loop_quit(main_loop_);
+				{
+					fprintf(stderr,"DO exit ... \n");
+					g_main_loop_quit(mainLoop);
+//					fprintf(stderr,"DO exit 1 ... \n");
+//					UpnpFinish();
+//					fprintf(stderr,"DO exit 2 ... \n");
+				}
 		}
 	return(0);
 }
@@ -76,6 +80,6 @@ int output_play(void)
 int output_stop(void)
 {
 	//freeAndNull(&omxplayerURI);
-	//fprintf(stderr,">>>stop<<<\n");
+	fprintf(stderr,">>>stop<<<\n");
 	return(0);
 }
