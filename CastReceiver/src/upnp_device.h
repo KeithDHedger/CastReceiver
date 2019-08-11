@@ -41,7 +41,14 @@ struct upnp_device_descriptor
 	struct service **services;
 };
 
-struct upnp_device;
+struct upnp_device
+{
+	struct upnp_device_descriptor *upnp_device_descriptor;
+	ithread_mutex_t device_mutex;
+	UpnpDevice_Handle device_handle;
+};
+
+//struct upnp_device;
 struct action_event;
 
 struct upnp_device *upnp_device_init(struct upnp_device_descriptor *device_def,const char *ip_address,unsigned short port);

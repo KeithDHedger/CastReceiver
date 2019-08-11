@@ -69,6 +69,7 @@ int output_play(void)
 			if(exitOnStop==true)
 				{
 					fprintf(stderr,"DO exit ... \n");
+					 
 					g_main_loop_quit(mainLoop);
 //					fprintf(stderr,"DO exit 1 ... \n");
 //					UpnpFinish();
@@ -81,6 +82,6 @@ int output_play(void)
 int output_stop(void)
 {
 	//freeAndNull(&omxplayerURI);
-	fprintf(stderr,">>>stop<<<\n");
+	//fprintf(stderr,">>>stop<<<\n");
 	return(0);
 }

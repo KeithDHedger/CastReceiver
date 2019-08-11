@@ -21,12 +21,12 @@
 
 #include "common.h"
 
-struct upnp_device
-{
-	struct upnp_device_descriptor *upnp_device_descriptor;
-	ithread_mutex_t device_mutex;
-	UpnpDevice_Handle device_handle;
-};
+//struct upnp_device
+//{
+//	struct upnp_device_descriptor *upnp_device_descriptor;
+//	ithread_mutex_t device_mutex;
+//	UpnpDevice_Handle device_handle;
+//};
 
 void upnp_set_error(struct action_event *event,int error_code,const char *format,...)
 {
@@ -306,6 +306,7 @@ struct upnp_device *upnp_device_init(struct upnp_device_descriptor *device_def,c
 
 	if (!initialize_device(device_def,result_device,ip_address,port))
 		{
+			UpnpUnRegisterRootDevice(result_device->device_handle);
 			UpnpFinish();
 			free(result_device);
 			return(NULL);
