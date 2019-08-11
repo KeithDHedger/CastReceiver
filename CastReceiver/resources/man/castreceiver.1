@@ -1,21 +1,19 @@
-.TH "CASTRECEIVER" "1" "0.0.3" "K.D.Hedegr" "User Commands"
+.TH "CASTRECEIVER" "1" "0.0.3" "K.D.Hedger" "User Commands"
 .SH "NAME"
 CastReceiver
 .br
-
 .SH "DESCRIPTION"
-CastReceiver
-.br
-.SS "USAGE:"
-castreceiver [OPTION?] - CastReceiver
-.br
-.SS "HELP OPTIONS:"
-\fB-h\fR, \fB--help\fR
-.br
-       Show help options
+Simple upnp based receiver for cast videos etc to RPI3
 .br
 
-.SS "APPLICATION OPTIONS:"
+Tested with AllCast and ServerCast on RPI3, also AllConnect on LFS Linux.
+.br
+ 
+.br
+.SH "USAGE"
+castreceiver [OPTIONS]
+.br
+.SS "OPTIONS"
 \fB-V\fR, \fB--version\fR
 .br
        Output version information and exit
@@ -31,8 +29,41 @@ castreceiver [OPTION?] - CastReceiver
        Exit when file stopped.
 .br
 
-\fB-v\fR, \fB--verbose\fR
+\fB-p, --player-command\fR
 .br
-       Show renderer details on start.
+		Custom player command.
+.br
+		The default is to use the RPI3 omxplayer ( omxplayer --key-config ~/.config/omxkey.config ).
 .br
 
+\fB-v, --verbose\fR
+.br
+		Show renderer details on start.
+.br
+
+\fB-h\fR, \fB--help\fR
+.br
+       Show help options
+.br
+.SS "EXAMPLES"
+Set friendly name and use mplayer.  
+.br
+castreceiver -f cast$(date +%M%S) --exit-on-stop -v -p mplayer
+.br
+
+Set friendly name and use mplayer on the framebuffer.  
+.br
+castreceiver -f cast$(date +%M%S) --exit-on-stop -v -p "mplayer -vo fbdev2 -vf scale=1920:1019"
+.br
+
+Use default name and default player, keep going when cast video stops.
+.br
+castreceiver
+.br
+.SH "BUGS ETC"
+
+Bugs, feature requests, Large bags of jewels to:
+.br
+
+keithdhedger@gmail.com
+.br
