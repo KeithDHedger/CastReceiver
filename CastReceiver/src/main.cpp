@@ -72,9 +72,9 @@ gboolean process_cmdline(int argc,char **argv)
 int main(int argc,char **argv)
 {
 	struct upnp_device_descriptor	*upnp_renderer;
+
 	if(!process_cmdline(argc,argv))
 		return(EXIT_FAILURE);
-
 
 	if(showVersion)
 		{
@@ -87,8 +87,6 @@ int main(int argc,char **argv)
 		return(EXIT_FAILURE);
 
 	device=upnp_device_init(upnp_renderer,ipAddress,listenPort);
-	//fprintf(stderr,">>%p<<\n",device->upnp_device_descriptor);
-
 	if(device==NULL)
 		{
 			fprintf(stderr,"ERROR: Failed to initialize UPnP device");
@@ -103,9 +101,6 @@ int main(int argc,char **argv)
 
 	output_loop();
 	upnp_device_shutdown(device);
-
-	// We're here,because the loop exited. Probably due to catching
-	// a signal.
 
 	return(EXIT_SUCCESS);
 }

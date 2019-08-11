@@ -40,64 +40,6 @@ int webserver_register_buf(const char *path,const char *contents,const char *con
 	return(0);
 }
 
-int webserver_register_file(const char *path,const char *content_type)
-{
-	char local_fname[PATH_MAX];
-	struct stat buf;
-	struct virtual_file *entry;
-	int rc;
-
-//	snprintf(local_fname,sizeof(local_fname),"%s%s",PKG_DATADIR,strrchr(path,'/'));//TODO//
-	snprintf(local_fname,sizeof(local_fname),"%s%s",DATADIR,strrchr(path,'/'));
-
-	rc=stat(local_fname,&buf);
-	if (rc)
-		return(-1);
-
-	entry=(virtual_file *)malloc(sizeof(struct virtual_file));
-	if (entry==NULL)
-		return(-1);
-
-	if (buf.st_size)
-		{
-			char *cbuf;
-			FILE *in;
-			in=fopen(local_fname,"r");
-			if (in==NULL)
-				{
-					free(entry);
-					return(-1);
-				}
-			cbuf=(char *)malloc(buf.st_size);
-			if (cbuf==NULL)
-				{
-					free(entry);
-					return(-1);
-				}
-			if (fread(cbuf,buf.st_size,1,in)!=1)
-				{
-					free(entry);
-					free(cbuf);
-					return(-1);
-				}
-			fclose(in);
-			entry->len=buf.st_size;
-			entry->contents=cbuf;
-
-		}
-	else
-		{
-			entry->len=0;
-			entry->contents=NULL;
-		}
-	entry->virtual_fname=path;
-	entry->content_type=content_type;
-	entry->next=virtual_files;
-	virtual_files=entry;
-
-	return(0);
-}
-
 int webserver_get_info(const char *filename,UpnpFileInfo *info)
 {
 	struct virtual_file *virtfile=virtual_files;
