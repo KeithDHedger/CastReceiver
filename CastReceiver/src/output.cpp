@@ -68,12 +68,7 @@ int output_play(void)
 			system(command);
 			if(exitOnStop==true)
 				{
-					fprintf(stderr,"DO exit ... \n");
-					 
 					g_main_loop_quit(mainLoop);
-//					fprintf(stderr,"DO exit 1 ... \n");
-//					UpnpFinish();
-//					fprintf(stderr,"DO exit 2 ... \n");
 				}
 		}
 	return(0);

@@ -102,14 +102,7 @@ int main(int argc,char **argv)
 		}
 
 	output_loop();
-	UpnpUnRegisterRootDevice(device->device_handle);
-//HACK for now cos it dont stop nicely ...
-//system("kill -9 $(pgrep castreceiver)");
-
-					fprintf(stderr,"DO exit 1 ... \n");
 	upnp_device_shutdown(device);
-//					UpnpFinish();
-					fprintf(stderr,"DO exit 2 ... \n");
 
 	// We're here,because the loop exited. Probably due to catching
 	// a signal.
