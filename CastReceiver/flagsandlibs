@@ -5,13 +5,14 @@ AM_CPPFLAGS =	-I$(top_srcdir) \
 			-DSYSCONFDIR=\""${sysconfdir}/${PACKAGE}"\" \
 			-DLIBDIR=\""${libdir}/${PACKAGE}"\" \
 			-DGMRENDER_UUID=\"`uuidgen`\" \
-			$(UPNP_CFLAGS) \
 			$(GLIB_CFLAGS) \
-			$(GTHREAD_CFLAGS)
+			$(GTHREAD_CFLAGS) \
+			$(UPNP_CFLAGS)
 
-LIBS =		$(UPNP_LIBS) \
+LIBS =		\
+			$(GTHREAD_LIBS) \
 			$(GLIB_LIBS) \
-			$(GTHREAD_LIBS)
+			$(UPNP_LIBS)
 
 
 
