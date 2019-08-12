@@ -21,6 +21,11 @@
 
 #include "common.h"
 
+void testdead(void)
+{
+fprintf(stderr,"never ....");
+}
+
 void xmlescape_real(const char *str, char *target, int *length,int attribute)
 {
 	if (target != NULL)

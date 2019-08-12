@@ -45,11 +45,6 @@ GOptionEntry		optionEntries[]=
 	{NULL}
 };
 
-void do_showVersion(void)
-{
-	fprintf(stderr,"%s - %s\n",PACKAGE_NAME,PACKAGE_VERSION);
-}
-
 gboolean process_cmdline(int argc,char **argv)
 {
 	GOptionContext	*ctx;
@@ -78,7 +73,7 @@ int main(int argc,char **argv)
 
 	if(showVersion)
 		{
-			do_showVersion();
+			fprintf(stderr,"%s - %s\n",PACKAGE_NAME,PACKAGE_VERSION);
 			exit(EXIT_SUCCESS);
 		}
 

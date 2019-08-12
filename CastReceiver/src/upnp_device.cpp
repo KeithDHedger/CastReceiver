@@ -317,6 +317,7 @@ struct upnp_device *upnp_device_init(struct upnp_device_descriptor *device_def,c
 
 void upnp_device_shutdown(struct upnp_device *device)
 {
+	UpnpUnRegisterRootDevice(device->device_handle);
 	UpnpFinish();
 }
 
