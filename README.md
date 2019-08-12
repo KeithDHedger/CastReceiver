@@ -5,7 +5,7 @@ https://github.com/hzeller/gmrender-resurrect
 
 Code hase been cleaned and translated to c++
 
-Tested on rpi3 + AllCast on android.
+Tested on rpi3 + AllCast or ServerCast on android.
 
 Still a number of bugs yet :( ...
 ...
