@@ -86,7 +86,6 @@ inline int minimum(int a,int b)
 	return((a<b)?a:b);
 }
 
-
 int webserver_read(UpnpWebFileHandle fh,char *buf,size_t buflen)
 {
 	struct WebServerFile *file=(struct WebServerFile *) fh;

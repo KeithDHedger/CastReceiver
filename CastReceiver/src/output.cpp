@@ -53,7 +53,7 @@ void output_set_uri(const char *uri)
 	output_stop();
 	freeAndNull(&omxplayerURI);
 	asprintf(&omxplayerURI,"%s",uri);
-	fprintf(stderr,"uri=omxplayerURI=%s\n",omxplayerURI);
+	//fprintf(stderr,"uri=omxplayerURI=%s\n",omxplayerURI);
 }
 
 int output_play(void)
@@ -67,9 +67,7 @@ int output_play(void)
 			asprintf(&command,"%s '%s'\n",playerCommand,omxplayerURI);
 			system(command);
 			if(exitOnStop==true)
-				{
-					g_main_loop_quit(mainLoop);
-				}
+				g_main_loop_quit(mainLoop);
 		}
 	return(0);
 }

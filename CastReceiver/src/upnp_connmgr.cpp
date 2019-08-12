@@ -20,7 +20,6 @@
 
 #include "common.h"
 
-
 ithread_mutex_t connmgr_mutex;
 
 struct argument **argument_listX[]={[CONNMGR_CMD_GETCURRENTCONNECTIONIDS]=NULL,[CONNMGR_CMD_GETPROTOCOLINFO]=NULL,[CONNMGR_CMD_PREPAREFORCONNECTION]=NULL,[CONNMGR_CMD_UNKNOWN]=NULL};

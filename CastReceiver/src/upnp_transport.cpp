@@ -480,7 +480,6 @@ struct service *upnp_transport_get_service(void)
 	return(&transport_service_);
 }
 
-
 void upnp_transport_register_variable_listener(variable_change_listener_t cb,void *userdata)
 {
 	VariableContainer_register_callback(state_variables_,cb,userdata);

@@ -21,13 +21,6 @@
 
 #include "common.h"
 
-//struct upnp_device
-//{
-//	struct upnp_device_descriptor *upnp_device_descriptor;
-//	ithread_mutex_t device_mutex;
-//	UpnpDevice_Handle device_handle;
-//};
-
 void upnp_set_error(struct action_event *event,int error_code,const char *format,...)
 {
 	char buffer[80];
