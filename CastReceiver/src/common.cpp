@@ -22,6 +22,8 @@
 #include "common.h"
 
 bool		exitOnStop=false;
+bool		printURL=false;
+
 const char	*playerCommand="omxplayer --key-config ~/.config/omxkey.config ";
 
 struct xmlelement *gen_specversion(struct xmldoc *doc,int major,int minor)

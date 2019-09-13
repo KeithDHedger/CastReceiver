@@ -40,6 +40,7 @@ GOptionEntry		optionEntries[]=
 	{"version",'V',0,G_OPTION_ARG_NONE,&showVersion,"Output version information and exit",NULL},
 	{"friendly-name",'f',0,G_OPTION_ARG_STRING,&friendlyName,"Friendly name to advertise.",NULL},
 	{"exit-on-stop",'e',0,G_OPTION_ARG_NONE,&exitOnStop,"Exit when file stopped.",NULL},
+	{"print-url",'u',0,G_OPTION_ARG_NONE,&printURL,"Just print the URL.",NULL},
 	{"player-command",'p',0,G_OPTION_ARG_STRING,&playerCommand,"Custom player command.",NULL},
 	{"verbose",'v',0,G_OPTION_ARG_NONE,&startUpTalk,"Show renderer details on start.",NULL},
 	{NULL}

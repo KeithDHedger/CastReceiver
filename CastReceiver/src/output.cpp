@@ -64,8 +64,15 @@ int output_play(void)
 
 	if(omxplayerURI!=NULL)
 		{
-			asprintf(&command,"%s '%s'\n",playerCommand,omxplayerURI);
-			system(command);
+			if(printURL==true)
+				{
+					printf("%s\n",omxplayerURI);
+				}
+			else
+				{
+					asprintf(&command,"%s '%s'\n",playerCommand,omxplayerURI);
+					system(command);
+				}
 			if(exitOnStop==true)
 				g_main_loop_quit(mainLoop);
 		}

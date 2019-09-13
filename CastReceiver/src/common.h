@@ -54,6 +54,7 @@
 
 extern const char	*playerCommand;
 extern bool			exitOnStop;
+extern bool			printURL;
 
 struct xmldoc;
 struct xmlelement *gen_specversion(struct xmldoc *doc,int major,int minor);
