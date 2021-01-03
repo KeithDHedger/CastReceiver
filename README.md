@@ -7,7 +7,7 @@ Code hase been cleaned and translated to c++
 
 Tested on rpi3 + AllCast, AllConnect or ServerCast on android.
 
-A number of dlna/upnp servers wont work with this for unknown reasons, only the two apps above are known to work.
+A number of dlna/upnp servers wont work with this for unknown reasons, only the three apps above are known to work, BubblUPNP does NOT work.
 
 You MUST have libupnp compiled with large file support like so:
 
