@@ -7,6 +7,20 @@ Code hase been cleaned and translated to c++
 
 Tested on rpi3 + AllCast or ServerCast on android.
 
+A number of dlna/upnp servers wont work with this for unknown reasons, only the two apps above are known to work.
+
+You MUST have libupnp compiled with large file support like so:
+
+LFSFLAGS="${LFSFLAGS} -D_LARGE_FILE_SOURCE -D_FILE_OFFSET_BITS=64"
+CFLAGS="$LFSFLAGS" CXXFLAGS="$LFSFLAGS" ./configure
+
+make sudo make install
+
+You may want to install in /usr/local/* ( which should be the default for configure ), that way you can have both versions of the lipupnp library's installed side by side.
+
+Alternativly get on to the packager of libupnp and ask for the large file version to be packaged.
+
+
 Still a number of bugs yet :( ...
 ...
 More to come
